@@ -2,8 +2,8 @@
 use strict; 
 # use warnings;
 # use utf8;
-# Programme Perl pour une classification Cosinus
-# Date : 22 02 2015
+# Perl script for a cosine-based classification
+# Date : 22-02-2015
 # Author: Jean-Valère Cossu
 # email: jean-valere.cossu@alumni.univ-avignon.fr
 if ($#ARGV < 0){

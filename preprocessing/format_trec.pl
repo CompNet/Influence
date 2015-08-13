@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# Programme Perl pour la mise au format TREC des sorties RepLab
+# Perl script for converting RepLab format to TREC format
 # Date : 04 04 2015
 # Author: Jean-Valère Cossu
 # email: jean-valere.cossu@alumni.univ-avignon.fr

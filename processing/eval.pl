@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-# Programme Perl pour l'évaluation classification
-# Date : 13 07 2015
+# Perl script for classification evaluation
+# Date : 13-07-2015
 # Author: Jean-Valère Cossu
 # email: jean-valere.cossu@alumni.univ-avignon.fr
 use strict; 
