@@ -15,10 +15,13 @@ The project is composed of the following scripts:
 
 Here are the third-party softwares included in this version:
 * Part of SVMs-based experiments were made using Multi-Class Support Vector Machine from Thorsten Joachims  (see: https://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html).
+* plspm4influence.R relies on R package 'plspm' (see: https://cran.r-project.org/web/packages/plspm/index.html).
 
 ## Installation
 * all perl scripts work perfectly on Windows (Cygwin) and UNIX systems with Perl 5, version 14, subversion 4, no additional module is required.
-* plspm4influence.R relies on R package 'plspm' (see: https://cran.r-project.org/web/packages/plspm/index.html).
+* to use plspm4influence.R just run : install.packages("plspm") to install the package and library("plspm") at the begining of the script to use the library.
+* To use Multi-Class Support Vector Machine, just download binaries at: http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html
+
 
 ### Use and Input
 * cosine_bot_*.pl scripts expect two text files (training and test set) as input, formatted as follows: tweet_id, user_id, domain_id, language, (3 unused fields), tweet_content, reference_tag (for influence), unused field. The script will load files in memory and build the model before cleaning the memory as it is running (6 Gb ram would be ok). The script only uses one core/thread and would be more or less fast depending on the CPU's maximum frequency.
