@@ -39,9 +39,7 @@ Here are the third-party softwares used in this version:
 * Outputs from `cosine_*.pl` scripts are translated to the TREC-EVAL tool format using the corresponding `format_trec_*.pl` script. The TREC-EVAL format is the following: `domain_id`, `unused_field`, `user_id`, `user_rank`, `score`, `system_name`.
 
 ## Data
-Raw data are available through the official RepLab page: http://nlp.uned.es/replab2014/
-
-(direct link: http://nlp.uned.es/replab2014/replab2014-dataset.tar.gz).`
+Raw data are available through the official RepLab page: http://nlp.uned.es/replab2014/ (direct link: http://nlp.uned.es/replab2014/replab2014-dataset.tar.gz).`
 
 RepLab 2014 uses Twitter data in English and Spanish. The balance between both languages depends on the availability of data for each of the profiles included in the dataset.
 
