@@ -41,7 +41,7 @@ Here are the third-party softwares used in this version:
 ## Data
 Raw data are available through the official RepLab page: http://nlp.uned.es/replab2014/
 
-(direct link: http://nlp.uned.es/replab2014/replab2014-dataset.tar.gz).
+(direct link: http://nlp.uned.es/replab2014/replab2014-dataset.tar.gz).`
 
 RepLab 2014 uses Twitter data in English and Spanish. The balance between both languages depends on the availability of data for each of the profiles included in the dataset.
 
