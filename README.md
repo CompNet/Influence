@@ -20,12 +20,11 @@ Here are the third-party softwares included in this version:
 * all perl scripts work perfectly on Windows (Cygwin) and UNIX systems with Perl 5, version 14, subversion 4, no additional module is required.
 * plspm4influence.R relies on R package 'plspm' (see: https://cran.r-project.org/web/packages/plspm/index.html).
 
-## Use
-The whole process is launched by... **(comemnt lancer le traitement, différents types de traitment possibles, etc.)**
+### Use and Input
+* cosine_bot_*.pl scripts expect two text files (training and test set) as input, formatted as follows: tweet_id, user_id, domain_id, language, (3 unused fields), tweet_content, reference_tag (for influence), unused field. The script will load files in memory and build the model before cleaning the memory as it is running (6 Gb ram would be ok). The script only uses one core/thread and would be more or less fast depending on the CPU's maximum frequency.
+* cosine_uad_*.pl scripts expect two text files (training and test set) as input, formatted as follows: user_id, reference_tag (for influence), unused field, user_document and the number of tweet in the domain/language selected. The script will load files in memory and build the model before cleaning the memory as it is running. The script only uses one core/thread and would be more or less fast depending on the CPU's maximum frequency. To complete the whole process you have to launch the script for each couple domain/language.
+* plspm4influence.R expect as input format a text file, the first field is the user id, the second one is the reference tag associated to each user (field separator is a single tab) following fields are then the variable you selected for analysis. You can access to each variable in code with its columun index. The first line contains fields ID (header).
 * To use plspm4influence.R just run the source through R and query R on the variable you are interested in to get more details about it. The script produce by itself Internal and External models figures. To select another domain, just change the data file name at the begining of the script.
-
-### Input
-The input expected by the programs must take the form... **(format, fichiers, tout ça)**
 
 ### Output
 The program outputs...  **(même chose)**
@@ -39,7 +38,6 @@ The training dataset consists of 7,000 Twitter profiles (all with at least 1,000
 Each profile consists of (i) author name; (ii) profile URL and (iii) the last 600 tweets published by the author at crawling time and have been manually labelled by reputation experts either as “opinion maker” (i.e. authors with reputational influence) or “non-opinion maker”. The objective is to find out which authors have more reputational influence (who the opinion makers are) and which profiles are less influential or have no influence at all. 
 
 Since Twitter TOS do not allow redistribution of tweets, only tweets ids and screen names are provided. Replab organisers provide details about how to download the tweets.
-
 
 System outputs are available at: http://figshare.com/articles/ACTIA_png/1506785
 
