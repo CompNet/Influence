@@ -28,7 +28,7 @@ Here are the third-party softwares used in this version:
 * To use `plspm4influence.R` just run the source through R and query R on the variable you are interested in to get more details about it. The script produces by itself *internal* and *external* models figures. To select another domain, just change the data file name at the beginning of the script.
 
 ### Output
-The program outputs...  **(à écrire)**
+* Outputs from `cosine_*.pl` scripts are translated to the TREC-EVAL tool format using corresponding `format_trec_*.pl` script. TREC-EVAL format is the following:  `domain_id`, `unused_field`, `user_id`, `user_rank`, `score`, `system_name`
 
 ## Data
 Raw data are available through the official RepLab page: http://nlp.uned.es/replab2014/
