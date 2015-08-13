@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-# Perl script for classification evaluation
-# Date : 13-07-2015
+# Programme Perl pour l'évaluation classification
+# Date : 13 07 2015
 # Author: Jean-Valère Cossu
 # email: jean-valere.cossu@alumni.univ-avignon.fr
 use strict; 
@@ -49,7 +49,8 @@ while(my $ligne = <SYS_OUT>){
 	my @list = split('\t', $ligne);
 	my $dom = $list[0]; 
 	my $tweet_id = $list[2]; 
-	my $hypothese = $list[4]*2;
+	# my $hypothese = $list[4]*2;
+	my $hypothese = $list[4];
 	if($hypothese>0.5){ # Seuil si la proba d'etre influent est supérieur à 0.5 ... 
 		$hypothese=1
 	}
