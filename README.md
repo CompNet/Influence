@@ -28,7 +28,7 @@ Here are the third-party softwares used in this version:
 ## Installation
 * All perl scripts work perfectly on Windows (via Cygwin) and Unix systems with Perl 5, version 14, subversion 4, no additional module is required.
 * To use *Multi-Class Support Vector Machine*, just download binaries at the following address: http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html
-* To use the R scripts, just install regularly the appropriate packages, using the command `install.packages("xxxxx")` for package ``xxxx`.
+* To use the R scripts, just install regularly the appropriate packages, using the command `install.packages("xxxxx")` for package `xxxx`.
 
 ### Use and Input
 * If you want to use the cooccurrence-based features, you need first to apply the `net-extraction.R` script. But before, you must edit it to set up the variables `in.folder` (input folder containing a collection of text documents, each one corresponding to the concatenation of the all the tweets published by a given user), `out.folder` (output folder, in which all the produced data files will be placed) and `log.file` at the beginning. The produced files include the list of terms for the whole collection (`terms.txt`), and for each user: the list of terms used by the user (`localterms.txt`), the user term cooccurrence matrix (`cooccurrences.txt`), the cooccurrence networks with all the nodal centrality measures at the Graphml format (`wordnetwork.graphml`), the same centrality vectors separately in a text file (`local.features.txt`) and their average values for the whole network as well as other global network measures such as the density `global.features.txt`). 
