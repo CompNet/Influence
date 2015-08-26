@@ -9,6 +9,9 @@ Note the software may evolve depending on our future research work.
 
 ## Organization
 The project is composed of the following folders:
+* `data_collect` : JAVA programs related the crawling - to get Twitter and Klout data
+ * `Main.java` : allows to obtain features related to a Twitter profile
+ * `MainGetTweets.java` : allows to obtain tweets posted by users
 * `preprocessing`: programs related to the preparation of the data.
  * `format_trec.pl`: convert the RepLab data to the TREC format.
  * `net-extraction.R`: extracts the cooccurrence networks based on a collection of documents, each one corresponding to all the tweets published by a user (*User-as-Document* approach). The script also computes the vector features based on topological centrality measures, through the `igraph` library.
@@ -29,8 +32,17 @@ Here are the third-party softwares used in this version:
 * All perl scripts work perfectly on Windows (via Cygwin) and Unix systems with Perl 5, version 14, subversion 4, no additional module is required.
 * To use *Multi-Class Support Vector Machine*, just download binaries at the following address: http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html
 * To use the R scripts, just install regularly the appropriate packages, using the command `install.packages("xxxxx")` for package `xxxx`.
+* Logistic regression, Random Forest, PCA and SVM can also be runned by using Python Script with the [Sci-kit Lean Lib]((http://scikit-learn.org/stable/))
 
 ### Use and Input
+* `data_collect`
+ * The project may be imported into all IDE (Eclipse, IntelliJ or Netbeans) and then built
+ * They can also be built by running 'javac MainGetTweets.java' and 'javac Main.java'
+ * To get Twitter profile data, run 'java Main fileWithToken fileWithAccounts fileToWriteAccounts' with 'fileWithToken' a file containing Twitter tokens, 'fileWithAccounts' a file containing the Twitter accounts to crawl, 'fileToWriteAccounts' the file name where to write the results
+ * To get tweets from specific Twitter accounts, run 'java MainGetTweets fileWithToken fileWithAccounts fileToWriteAccounts' with 'fileWithToken' a file containing Twitter tokens, 'fileWithAccounts' a file containing the Twitter accounts to crawl, 'fileToWriteAccounts' the file name where to write the results
+ * 'fileWithToken' file has to be written as follows : 'twitterAccountName	1346266278-3orvewl5mfCO1xfEEt1gN064uWnjyNyGRDzHO6c	1r65PNGNh62dUg28M8eyUJNkXekomzWNyguSXXqW6Q' with one token per line
+ * 'fileWithAccounts' file has to contain one user id per line
+ 
 * If you want to use the cooccurrence-based features, you need first to apply the `net-extraction.R` script. But before, you must edit it to set up the variables `in.folder` (input folder containing a collection of text documents, each one corresponding to the concatenation of the all the tweets published by a given user), `out.folder` (output folder, in which all the produced data files will be placed) and `log.file` at the beginning. The produced files include the list of terms for the whole collection (`terms.txt`), and for each user: the list of terms used by the user (`localterms.txt`), the user term cooccurrence matrix (`cooccurrences.txt`), the cooccurrence networks with all the nodal centrality measures at the Graphml format (`wordnetwork.graphml`), the same centrality vectors separately in a text file (`local.features.txt`) and their average values for the whole network as well as other global network measures such as the density `global.features.txt`). 
 * The distance between cooccurrence networks can be processed using either the `net-distance.R` R script or the `SerialDistanceProcessor.java` class (faster). For the R script, like before you must set up the variables at the beginning. For the Java class, the same modifications must be performed in the `main` method. 
 * The `cosine_bot_*.pl` scripts expect two text files (*training* and *test* set) as input, formatted as follows: `tweet_id`, `user_id`, `domain_id`, `language`, (3 unused fields), `tweet_content`, `reference_tag` (for influence), and an unused field. The script will load files in memory and build the model before cleaning the memory as it is running (6 GB RAM would be OK). The script only uses one core/thread and would be more or less fast depending on the CPU maximum frequency.
