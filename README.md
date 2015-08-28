@@ -13,20 +13,20 @@ Note the software may evolve depending on our future research work.
 ## Organization
 The project is composed of the following folders:
 * `preprocessing`: programs related to the preparation of the data.
- * `retrieval`: Java classes used to retrieve additional Twitter and Klout data
-  * `Main.java`: allows to obtain additional features related to a Twitter profile.
-  * `MainGetTweets.java`: allows to obtain tweets posted by users
- * `cooccurrence`: programs aiming at extracting cooccurrence networks and the related features.
-  * `net-extraction.R`: extracts the cooccurrence networks based on a collection of documents, each one corresponding to all the tweets published by a user (*User-as-Document* approach). The script also computes the vector features based on topological centrality measures, through the `igraph` library.
-  * `net-distance.R`: processes the distance between each pair of cooccurrence network (each network corresponds to a user).
-  * `DistanceProcessor.java`: same as above, but in Java instead of R, and much faster. The program is multithreaded, by comparison `SerialDistanceProcessor.java` performs the same processing in a non-parallel way.
+  * `retrieval`: Java classes used to retrieve additional Twitter and Klout data
+    * `Main.java`: allows to obtain additional features related to a Twitter profile.
+    * `MainGetTweets.java`: allows to obtain tweets posted by users
+  * `cooccurrence`: programs aiming at extracting cooccurrence networks and the related features.
+    * `net-extraction.R`: extracts the cooccurrence networks based on a collection of documents, each one corresponding to all the tweets published by a user (*User-as-Document* approach). The script also computes the vector features based on topological centrality measures, through the `igraph` library.
+    * `net-distance.R`: processes the distance between each pair of cooccurrence network (each network corresponds to a user).
+    * `DistanceProcessor.java`: same as above, but in Java instead of R, and much faster. The program is multithreaded, by comparison `SerialDistanceProcessor.java` performs the same processing in a non-parallel way.
 * `processing`: programs implementing the classification and ranking tasks, as well as their evaluation.
- * `cosine_bot_xxx.pl` scripts concern the Bag-of-Tweets based user classification. These scripts compute the probability of each tweet of a given user to be written by an influencer. They then associate to each user a score of being an influencer according 2 methods `xx` can be replaced by `Sum` or `Count`).
+  * `cosine_bot_xxx.pl` scripts concern the Bag-of-Tweets based user classification. These scripts compute the probability of each tweet of a given user to be written by an influencer. They then associate to each user a score of being an influencer according 2 methods `xx` can be replaced by `Sum` or `Count`).
 * `postprocessing`: programs used to analyze and convert the processing results
   * `regression`: PLS-PM scripts, used to study more thoroughly the relation between certain features and the class.
-   * `plspm4influence.R` : this script aims at finding relations between features categories and verify the efficiency of the proposed influence conceptual model.
+    * `plspm4influence.R` : this script aims at finding relations between features categories and verify the efficiency of the proposed influence conceptual model.
   * `format`: scripts related to the format of the input data.
-   * `format_trec_xxx(.multi).pl`: these scripts convert the RepLab data to the TREC format.
+    * `format_trec_xxx(.multi).pl`: these scripts convert the RepLab data to the TREC format.
 
 Here are the third-party softwares used in this version:
 * Part of SVMs-based experiments were made using [Multi-Class Support Vector Machine](https://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html) by Thorsten Joachims.
@@ -36,7 +36,7 @@ Here are the third-party softwares used in this version:
 
 
 ## Installation
-* The Java project may be imported into all IDE (Eclipse, IntelliJ or Netbeans) and then built. It can also be built by running `javac MainGetTweets.java` and `javac Main.java` 
+* The Java project may be imported into all IDE (Eclipse, IntelliJ or Netbeans) and then built. It can also be built by running: `javac MainGetTweets.java` and `javac Main.java` 
 * All perl scripts work perfectly on Windows (via Cygwin) and Unix systems with Perl 5, version 14, subversion 4, no additional module is required.
 * To use *Multi-Class Support Vector Machine*, just download binaries at the following address: http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html
 * To use the R scripts, just install regularly the appropriate packages, using the command `install.packages("xxxxx")` for package `xxxx`.
@@ -58,7 +58,9 @@ To get tweets from specific Twitter accounts, run `java MainGetTweets fileWithTo
 * 'fileToWriteAccounts' the file name where to write the results.
 
 The `fileWithToken` file has to be written as follows : 
-`twitterAccountName	1346266278-3orvewl5mfCO1xfEEt1gN064uWnjyNyGRDzHO6c	1r65PNGNh62dUg28M8eyUJNkXekomzWNyguSXXqW6Q` 
+
+`twitterAccountName	1346266278-3orvewl5mfCO1xfEEt1gN064uWnjyNyGRDzHO6c	1r65PNGNh62dUg28M8eyUJNkXekomzWNyguSXXqW6Q`
+
 with one token per line. The `fileWithAccounts` file has to contain one user id per line.
  
 
