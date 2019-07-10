@@ -10,7 +10,7 @@ Twitter Influence is free software: you can redistribute it and/or modify it und
 * **GitHub repo:** https://github.com/CompNet/Influence
 * **Contact:** Jean-Valère Cossu <jean-valere.cossu@alumni.univ-avignon.fr>
  
------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
 ## Description
 These scripts are meant to extract certain features from raw Twitter data describing Twitter users (tweets, profile info, as well as external data). Once the features are extracted, various forms of SVMs are trained, and logistic regressions are performed, to classify and rank the users. These operations are conducted on different subgroups of features. The details of the process are given in [CDL'15] and [CLD'16]. The scripts were applied to the classification/ranking of Twitter users in terms of *offline* influence, based on the [RepLab 2014 dataset](http://nlp.uned.es/replab2014/).
