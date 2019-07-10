@@ -1,11 +1,21 @@
-Characterization of Twitter Profiles, with an application to offline influence detection
+Twitter Influence
 ==============================
+*Characterization of Twitter Profiles, with an application to offline influence detection*
 
+* Copyright 2014-15 Jean-Valère Cossu, Nicolas Dugué & Vincent Labatut
 
-## Presentation
-These scripts are meant to extract certain features from raw Twitter data describing Twitter users (tweets, profile info, as well as external data). Once the features are extracted, various forms of SVMs are trained, and logistic regressions are performed, to classify and rank the users. These operations are conducted on different subgroups of features. The details of the process are given in [CDL'15] and [CLD'15]. The scripts were applied to the classification/ranking of Twitter users in terms of *offline* influence, based on the [RepLab 2014 dataset](http://nlp.uned.es/replab2014/).
+Twitter Influence is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. For source availability and license information see `licence.txt`
 
-Please, cite [CLD'15] if you use our scripts. We would also be very interested to know your context of application and/or modification, so please, let us know.
+* **Lab site:** http://lia.univ-avignon.fr
+* **GitHub repo:** https://github.com/CompNet/Influence
+* **Contact:** Jean-Valère Cossu <jean-valere.cossu@alumni.univ-avignon.fr>
+ 
+-----------------------------------------------------------------------
+
+## Description
+These scripts are meant to extract certain features from raw Twitter data describing Twitter users (tweets, profile info, as well as external data). Once the features are extracted, various forms of SVMs are trained, and logistic regressions are performed, to classify and rank the users. These operations are conducted on different subgroups of features. The details of the process are given in [CDL'15] and [CLD'16]. The scripts were applied to the classification/ranking of Twitter users in terms of *offline* influence, based on the [RepLab 2014 dataset](http://nlp.uned.es/replab2014/).
+
+Please, cite [CLD'16] if you use our scripts. We would also be very interested to know your context of application and/or modification, so please, let us know.
 
 Note the software may evolve depending on our future research work.
 
@@ -95,12 +105,6 @@ Since Twitter TOS do not allow redistribution of tweets, only tweets IDs and scr
 The system outputs from our scripts for these data are freely available on Figshare: http://figshare.com/articles/ACTIA_png/1506785
 
 
-## Contact
-*Work by:* Jean-Valère Cossu, Nicolas Dugué & Vincent Labatut.
-
-*Corresponding author:* Jean-Valère Cossu <jean-valere.cossu@alumni.univ-avignon.fr>
-
-
 ## References
-* **[CDL'15]** Cossu, J.-V.; Dugué, N. & Labatut, V. *Detecting Real-World Influence Through Twitter*, 2nd European Network Intelligence Conference (ENIC), Karlskrona, SE, 2015. http://arxiv.org/abs/1506.05903
-* **[CLD'15]** Cossu, J.-V.; Labatut, V. & Dugué, N. *A Review of Features for the Discrimination of Twitter Users*, 2015, submitted to SNAM.
+ * **[CLD'16]** J.-V. Cossu, N. Dugué & V. Labatut. *A Review of Features for the Discrimination of Twitter Users: Application to the Prediction of Offline Influence*, Social Network Analysis and Mining, 6(1):25, 2016. [doi: 10.1007/s13278-016-0329-x](https://doi.org/10.1007/s13278-016-0329-x) - [⟨hal-01203171⟩](https://hal.archives-ouvertes.fr/hal-01203171)
+ * **[CDL'15]** J.-V. Cossu, N. Dugué & V. Labatut. *Detecting Real-World Influence Through Twitter*, 2nd European Network Intelligence Conference (ENIC), 2015, 228-233. [doi: 10.1109/ENIC.2015.20](https://doi.org/10.1109/ENIC.2015.20) - [⟨hal-01164453⟩](https://hal.archives-ouvertes.fr/hal-01164453)
