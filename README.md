@@ -1,10 +1,10 @@
-Twitter Influence
+TwitterInfluence
 ==============================
 *Characterization of Twitter Profiles, with an application to offline influence detection*
 
 * Copyright 2014-15 Jean-Valère Cossu, Nicolas Dugué & Vincent Labatut
 
-Twitter Influence is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. For source availability and license information see `licence.txt`
+`TwitterInfluence` is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. For source availability and license information see `licence.txt`
 
 * **Lab site:** http://lia.univ-avignon.fr
 * **GitHub repo:** https://github.com/CompNet/Influence
@@ -13,11 +13,22 @@ Twitter Influence is free software: you can redistribute it and/or modify it und
 -------------------------------------------------------------------------
 
 ## Description
-These scripts are meant to extract certain features from raw Twitter data describing Twitter users (tweets, profile info, as well as external data). Once the features are extracted, various forms of SVMs are trained, and logistic regressions are performed, to classify and rank the users. These operations are conducted on different subgroups of features. The details of the process are given in [CDL'15] and [CLD'16]. The scripts were applied to the classification/ranking of Twitter users in terms of *offline* influence, based on the [RepLab 2014 dataset](http://nlp.uned.es/replab2014/).
+These scripts are meant to extract certain features from raw Twitter data describing Twitter users (tweets, profile info, as well as external data). Once the features are extracted, various forms of SVMs are trained, and logistic regressions are performed, to classify and rank the users. These operations are conducted on different subgroups of features. The details of the process are given in [[CDL'15](#references)] and [[CLD'16](#references)]. The scripts were applied to the classification/ranking of Twitter users in terms of *offline* influence, based on the [RepLab 2014 dataset](http://nlp.uned.es/replab2014/).
 
-Please, cite [CLD'16] if you use our scripts. We would also be very interested to know your context of application and/or modification, so please, let us know.
+Please, cite [[CLD'16](#references)] if you use our scripts. We would also be very interested to know your context of application and/or modification, so please, let us know.
+```bibtex
+@Article{Cossu2016,
+  author        = {Cossu, Jean-Valère and Labatut, Vincent and Dugué, Nicolas},
+  title         = {A Review of Features for the Discrimination of {Twitter} Users: Application to the Prediction of Offline Influence},
+  journal       = {Social Network Analysis and Mining},
+  year          = {2016},
+  volume        = {6},
+  pages         = {25},
+  doi           = {10.1007/s13278-016-0329-x},
+}
+```
 
-Note the software may evolve depending on our future research work.
+Note that the software may evolve depending on our future research work.
 
 
 ## Organization
@@ -68,9 +79,9 @@ To get tweets from specific Twitter accounts, run `java MainGetTweets fileWithTo
 * 'fileToWriteAccounts' the file name where to write the results.
 
 The `fileWithToken` file has to be written as follows : 
-
-`twitterAccountName	1346266278-3orvewl5mfCO1xfEEt1gN064uWnjyNyGRDzHO6c	1r65PNGNh62dUg28M8eyUJNkXekomzWNyguSXXqW6Q`
-
+```
+twitterAccountName	1346266278-3orvewl5mfCO1xfEEt1gN064uWnjyNyGRDzHO6c	1r65PNGNh62dUg28M8eyUJNkXekomzWNyguSXXqW6Q
+```
 with one token per line. The `fileWithAccounts` file has to contain one user id per line.
  
 
@@ -102,9 +113,9 @@ Each profile consists of (i) author name; (ii) profile URL and (iii) the last 60
 
 Since Twitter TOS do not allow redistribution of tweets, only tweets IDs and screen names are provided. RepLab organizers provide details about how to download the tweets.
 
-The system outputs from our scripts for these data are freely available on Figshare: http://figshare.com/articles/ACTIA_png/1506785
+The system outputs from our scripts for these data are freely available on [Zenodo](https://doi.org/10.5281/zenodo.6815449).
 
 
 ## References
- * **[CLD'16]** J.-V. Cossu, N. Dugué & V. Labatut. *A Review of Features for the Discrimination of Twitter Users: Application to the Prediction of Offline Influence*, Social Network Analysis and Mining, 6(1):25, 2016. [doi: 10.1007/s13278-016-0329-x](https://doi.org/10.1007/s13278-016-0329-x) - [⟨hal-01203171⟩](https://hal.archives-ouvertes.fr/hal-01203171)
- * **[CDL'15]** J.-V. Cossu, N. Dugué & V. Labatut. *Detecting Real-World Influence Through Twitter*, 2nd European Network Intelligence Conference (ENIC), 2015, 228-233. [doi: 10.1109/ENIC.2015.20](https://doi.org/10.1109/ENIC.2015.20) - [⟨hal-01164453⟩](https://hal.archives-ouvertes.fr/hal-01164453)
+ * **[CLD'16]** J.-V. Cossu, N. Dugué & V. Labatut. *A Review of Features for the Discrimination of Twitter Users: Application to the Prediction of Offline Influence*, Social Network Analysis and Mining, 6(1):25, 2016. DOI: [10.1007/s13278-016-0329-x](https://doi.org/10.1007/s13278-016-0329-x) - [⟨hal-01203171⟩](https://hal.archives-ouvertes.fr/hal-01203171)
+ * **[CDL'15]** J.-V. Cossu, N. Dugué & V. Labatut. *Detecting Real-World Influence Through Twitter*, 2nd European Network Intelligence Conference (ENIC), 2015, 228-233. DOI: [10.1109/ENIC.2015.20](https://doi.org/10.1109/ENIC.2015.20) - [⟨hal-01164453⟩](https://hal.archives-ouvertes.fr/hal-01164453)
